@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derrick's Website</title>
+    <style>
+        *{
+            text-decoration: none; margin: 0; padding: 0;
+        }
+        main{
+            background-color: rgb(204, 188, 168); margin: 0; padding: 0; 
+        }
+        h1{
+            color: black
+        }
+        .navbar{
+            font-family: 'Times New Roman', Times, serif; padding-right: 15px; padding-left: 15px; position: flex; background-color: black; 
+        }
+        .navdiv{
+            display: flex; align-items: center; justify-content: space-between; 
+        }
+        li{
+            list-style: none; display: inline-block; 
+        }
+        .myName{
+            font-size: 35px; font-weight: 600; color: white; 
+        }
+        body{
+            margin: 0; padding: 0; height: 200px; 
+        }
+       
+        li a{
+            color: white; font-size: 18px; font-weight: bold; margin-right: 25px; align-items: right; 
+        }
+        .contact{
+          width: 40%; height: 60vh; display: flex; align-items: center;  
+        }
+        form{
+            background: rgb(204, 197, 197); display: flex; flex-direction: column; padding: 1vw 4vw; width: 90%; max-width: 700px; border-radius: 30px;
+        }
+        .form h3{
+            color: #555; font-weight: 800; margin-bottom: 20px;
+        }
+        form input, form textarea{
+            border: 0; margin: 10px 0; padding: 20px; outline: none; background: #f5f5f5; font-size: 16px; resize: none;
+        }
+        .error-txt{
+            font-size: 14.5px; color: #e71e2f; text-align: left; display: none;
+        }
+        .contact button{
+            padding: 15px; background: #e71e2f; color: white; font-size: 18px; border: 0; outline: none; cursor: pointer; width: 150px; margin: 20px auto 0; border-radius: 30px; box-shadow: 0 0 10px #e71e2f;
+        }
+    </style>
+</head>    
+<body>
+    
+    <header>
+        <nav class="navbar">
+            <div class="navdiv">
+            <div class="myName"><h2>Derrick Allen</h2></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Contact Me</h1>
+        <p>You can contact me at my email or phone number.</p>
+        <p>Email: dhamil51@students.kennesaw.edu</p>
+        <p>Phone: 470-***-****</p>
+        <p>I am open to any questions or propositions you may have about my business.</p>
+        <p>Thank you for your interest!</p>
+        <section class="contact">
+            <form action="#">
+                <h3>GET IN TOUCH</h3>
+                <div class="input-box">
+                    <div class="input-field field">
+                            <input type="text" id="name" placeholder="Full Name" required
+                            class="item" autocomplete="off">
+                        </div>
+                        <div class="error-txt">Full Name can't be blank</div>
+                        <div class="input-field field">
+                            <input type="email" id="email" placeholder="Email" required
+                            class="item" autocomplete="off">
+                        </div>
+                        <div class="error-txt">Email can't be blank</div>
+                        <div class="input-field field">
+                            <input type="text" id="phone" placeholder="Phone" required
+                            class="item" autocomplete="off">
+                        </div>
+                        <div class="error-txt">Phone number can't be blank</div>
+                        <textarea id="message" rows="4" placeholder="How can I help you?" class="item" autocomplete="off"></textarea>
+                        <div class="error-txt">Message can't be blank</div>
+                        <button type="submit">Send</button>
+                </div>
+            </form>
+        </section>
+        <script src="https://smtpjs.com/v3/smtp.js"></script> 
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="script.js"></script>      
+    </main>
+</body>
+</html>
